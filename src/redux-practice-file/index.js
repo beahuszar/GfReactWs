@@ -1,7 +1,7 @@
 import { createStore } from 'redux';
-import reducers from './reducers';
-import { increase, decrease, set, reset } from './amountActions';
-import { addTag, removeTag, removeAllTags } from './tagActions';
+import reducers from '../reducers/reducers';
+import { increase, decrease, set, reset } from '../actions/amountActions';
+import { addTag, removeTag, removeAllTags } from '../actions/tagActions';
 
 const store = createStore(reducers);
 
