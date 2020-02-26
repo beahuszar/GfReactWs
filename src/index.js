@@ -1,12 +1,35 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import { createStore } from 'redux';
+import reducers from './reducers';
+import { increase, decrease, set, reset } from './amountActions';
+import { addTag, removeTag, removeAllTags } from './tagActions';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+const store = createStore(reducers);
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+store.dispatch(set(6));
+console.log(store.getState());
+
+store.dispatch(increase());
+console.log(store.getState());
+
+store.dispatch(increase(2));
+console.log(store.getState());
+
+store.dispatch(reset());
+console.log(store.getState());
+store.dispatch(increase());
+console.log(store.getState());
+store.dispatch(decrease(4));
+console.log(store.getState());
+
+store.dispatch(addTag('blue'));
+console.log(store.getState());
+store.dispatch(addTag('bold'));
+console.log(store.getState());
+store.dispatch(addTag('hipster'));
+console.log(store.getState());
+store.dispatch(removeTag('blue'));
+console.log(store.getState());
+store.dispatch(addTag('bold'));
+console.log(store.getState());
+store.dispatch(removeAllTags('bold'));
+console.log(store.getState());
