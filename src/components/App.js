@@ -6,6 +6,7 @@ import Setter from './Setter';
 import TagList from './TagList';
 import TagAdd from './TagAdd';
 import TagRemove from './TagRemove';
+import ComplexCounter from './ComplexCounter';
 
 const App = () => {
   return (
@@ -20,6 +21,7 @@ const App = () => {
         <TagList />
         <TagAdd />
         <TagRemove />
+        <ComplexCounter />
       </div>
     </>
   );
