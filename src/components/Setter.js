@@ -21,7 +21,4 @@ const Setter = props => {
   );
 };
 
-const mapStateToProps = state => {
-  return { counter: state.counter };
-};
-export default connect(mapStateToProps, { set })(Setter);
+export default connect(null, { set })(Setter);

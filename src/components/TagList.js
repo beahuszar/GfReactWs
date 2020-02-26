@@ -11,8 +11,13 @@ const TagList = ({ tags }) => {
 
   return (
     <div>
+      <h1>Tags</h1>
       {tags.map(tag => {
-        return <div style={tagStyle}>{tag}</div>;
+        return (
+          <div style={tagStyle} key={tag}>
+            {tag}
+          </div>
+        );
       })}
     </div>
   );
