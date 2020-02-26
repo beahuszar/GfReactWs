@@ -1,4 +1,4 @@
-export default (state, action) => {
+export default (state = ['blue', 'bold', 'hipster'], action) => {
   switch (action.type) {
     case 'ADD_TAG':
       return !state.includes(action.tag) ? [...state, action.tag] : state;

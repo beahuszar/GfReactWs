@@ -6,12 +6,12 @@ import Setter from './Setter';
 
 const App = () => {
   return (
-    <>
+    <div style={{ display: 'flex', justifyContent: 'space-around' }}>
       <Increaser />
       <Decreaser />
       <Resetter />
       <Setter />
-    </>
+    </div>
   );
 };
 

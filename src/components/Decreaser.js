@@ -4,13 +4,13 @@ import { decrease } from '../actions/amountActions';
 
 const Decreaser = props => {
   return (
-    <>
+    <div>
       <h1>The Decreaser</h1>
       <p>{props.counter}</p>
       <button type="button" onClick={() => props.decrease()}>
         Decrease
       </button>
-    </>
+    </div>
   );
 };
 

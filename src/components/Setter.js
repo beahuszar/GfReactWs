@@ -6,7 +6,7 @@ const Resetter = props => {
   const [inputValue, setInputValue] = useState(0);
 
   return (
-    <>
+    <div>
       <h1>The Setter</h1>
       <form>
         <input
@@ -17,7 +17,7 @@ const Resetter = props => {
           Set
         </button>
       </form>
-    </>
+    </div>
   );
 };
 
