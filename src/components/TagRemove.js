@@ -1,9 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { removeTag } from '../actions/tagActions';
 
-const TagList = ({ tags, removeTag }) => {
+const TagRemove = ({ tags, removeTag }) => {
   const tagStyle = {
-    backgroundColor: 'blue',
+    backgroundColor: 'red',
     color: 'white',
     padding: '5px 15px',
     margin: '5px 15px'
@@ -11,10 +12,10 @@ const TagList = ({ tags, removeTag }) => {
 
   return (
     <div>
-      <h1>Tags</h1>
+      <h1>Remove Tags</h1>
       {tags.map(tag => {
         return (
-          <div style={tagStyle} key={tag}>
+          <div style={tagStyle} key={tag} onClick={() => removeTag(tag)}>
             {tag}
           </div>
         );
@@ -29,4 +30,4 @@ const mapStateToProps = state => {
   };
 };
 
-export default connect(mapStateToProps)(TagList);
+export default connect(mapStateToProps, { removeTag })(TagRemove);

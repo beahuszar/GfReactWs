@@ -5,6 +5,7 @@ import Resetter from './Resetter';
 import Setter from './Setter';
 import TagList from './TagList';
 import TagAdd from './TagAdd';
+import TagRemove from './TagRemove';
 
 const App = () => {
   return (
@@ -18,6 +19,7 @@ const App = () => {
       <div style={{ display: 'flex', justifyContent: 'space-around' }}>
         <TagList />
         <TagAdd />
+        <TagRemove />
       </div>
     </>
   );
