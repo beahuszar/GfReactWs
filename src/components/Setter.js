@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { set } from '../actions/amountActions';
 
-const Resetter = props => {
+const Setter = props => {
   const [inputValue, setInputValue] = useState(0);
 
   return (
@@ -24,4 +24,4 @@ const Resetter = props => {
 const mapStateToProps = state => {
   return { counter: state.counter };
 };
-export default connect(mapStateToProps, { set })(Resetter);
+export default connect(mapStateToProps, { set })(Setter);

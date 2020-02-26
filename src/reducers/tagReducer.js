@@ -7,6 +7,6 @@ export default (state = ['blue', 'bold', 'hipster'], action) => {
     case 'REMOVE_TAGS':
       return [];
     default:
-      return [];
+      return state;
   }
 };

@@ -4,5 +4,5 @@ import tagReducer from './tagReducer';
 
 export default combineReducers({
   counter: amountReducer,
-  tag: tagReducer
+  tags: tagReducer
 });
