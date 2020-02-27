@@ -6,7 +6,7 @@ const Increaser = props => {
   return (
     <div>
       <h1>The Increaser</h1>
-      <p>{props.counter}</p>
+      <p data-testid="counter">{props.counter}</p>
       <button type="button" onClick={() => props.increase()}>
         Increase
       </button>
