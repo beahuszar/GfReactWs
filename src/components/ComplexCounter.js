@@ -1,11 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { connect } from 'react-redux';
+import ThemeContext, { themes } from '../context/ThemeContext';
 
 const ComplexCounter = ({ complexValue }) => {
+  const theme = useContext(ThemeContext);
+  const currentTheme = themes[theme];
+
   return (
-    <div>
-      <h1>ComplexCounter</h1>
-      <p>{complexValue}</p>
+    <div style={{ backgroundColor: currentTheme.background, padding: '10px' }}>
+      <h1 style={{ color: currentTheme.textColor }}>ComplexCounter</h1>
+      <p style={{ color: currentTheme.textColor }}>{complexValue}</p>
     </div>
   );
 };

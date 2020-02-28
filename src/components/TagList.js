@@ -1,5 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { connect } from 'react-redux';
+import ThemeContext, { themes } from '../context/ThemeContext';
 
 const TagList = ({ tags, removeTag }) => {
   const tagStyle = {
@@ -8,10 +9,12 @@ const TagList = ({ tags, removeTag }) => {
     padding: '5px 15px',
     margin: '5px 15px'
   };
+  const theme = useContext(ThemeContext);
+  const currentTheme = themes[theme];
 
   return (
-    <div>
-      <h1>Tags</h1>
+    <div style={{ backgroundColor: currentTheme.background, padding: '10px' }}>
+      <h1 style={{ color: currentTheme.textColor }}>Tags</h1>
       {tags.map(tag => {
         return (
           <div style={tagStyle} key={tag}>
